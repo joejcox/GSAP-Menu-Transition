@@ -14,26 +14,39 @@ class MainNavigation extends Component {
     const tl = gsap.timeline();
     tl.fromTo(
       "#main-navigation",
-      1,
-      { opacity: 0 },
-      { opacity: 1, ease: "Power1.easeOut" }
+      0.8,
+      { maxHeight: 0 },
+      { maxHeight: "100%", ease: "Power3.easeOut" }
     )
       .fromTo(
         "#main-navigation .underlay",
         0.6,
-        { maxWidth: "0" },
-        { maxWidth: "50%", ease: "Power2.easeOut" },
-        0.4
+        { maxHeight: "0" },
+        {
+          maxHeight: "100%",
+          ease: "Power2.easeInOut",
+        },
+        0.7
+      )
+      .to(
+        "#main-navigation",
+        0.4,
+        {
+          background: "rgb(88, 245, 148)",
+          ease: "Power1.easeOut",
+        },
+        1.2
       )
       .fromTo(
         ".menu-label",
         0.4,
         { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, ease: "Power1.easeOut" }
+        { opacity: 1, y: 0, ease: "Power1.easeOut" },
+        1.3
       )
       .fromTo(
         ".menu-list li",
-        0.8,
+        0.4,
         { opacity: 0, y: 20 },
         {
           opacity: 1,
@@ -41,7 +54,7 @@ class MainNavigation extends Component {
           stagger: 0.1,
           ease: "Power3.easeInOut",
         },
-        1
+        1.5
       );
   }
 

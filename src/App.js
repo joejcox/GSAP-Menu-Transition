@@ -35,34 +35,36 @@ class App extends Component {
     }
     return (
       <>
-        <nav
-          className="navbar-menu"
-          role="navigation"
-          aria-label="main navigation">
-          <div className="navbar-start">
-            <div className="navbar-brand">
-              <a className="navbar-item" href="/">
-                <img
-                  src="https://bulma.io/images/bulma-logo.png"
-                  alt="Bulma: Free, open source, and modern CSS framework based on Flexbox"
-                  width="112"
-                  height="28"
-                />
-              </a>
+        <div className="container" id="nav-container">
+          <nav
+            className="navbar-menu"
+            role="navigation"
+            aria-label="main navigation">
+            <div className="navbar-start">
+              <div className="navbar-brand">
+                <a className="navbar-item" href="/">
+                  <img
+                    src="https://bulma.io/images/bulma-logo.png"
+                    alt="Bulma: Free, open source, and modern CSS framework based on Flexbox"
+                    width="112"
+                    height="28"
+                  />
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="navbar-end">
-            <button
-              className={burgerClasses}
-              aria-label="menu"
-              aria-expanded="false"
-              onClick={() => this.toggleMenu()}>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </button>
-          </div>
-        </nav>
+            <div className="navbar-end">
+              <button
+                className={burgerClasses}
+                aria-label="menu"
+                aria-expanded="false"
+                onClick={() => this.toggleMenu()}>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </button>
+            </div>
+          </nav>
+        </div>
         {menu}
       </>
     );

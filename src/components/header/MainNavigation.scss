@@ -1,6 +1,10 @@
 #main-navigation {
-    position: relative;
+    position: absolute;
+    width: 100%;
+    top: 0;
     height: 100vh;
+    left: 0;
+    right: 0;
     background: rgb(255, 166, 0);
     overflow: hidden;
     z-index: 999;

@@ -1,7 +1,17 @@
+#nav-container {
+  z-index: 1000;
+}
 .navbar-burger {
   display: block;
   background: white;
   outline: none;
   box-shadow: none;
   border: none;
+  transform: scale(2);
+}
+.navbar-burger:hover {
+  background: inherit;
+}
+.navbar-burger.is-active {
+  background: transparent;
 }
